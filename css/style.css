@@ -1,12 +1,10 @@
 *{
     box-sizing: border-box;
 }
-body
-{
+body{
     margin: 0;
 }
-.Header
-{
+.Header{
     background-color: black;
     background-size: cover;
     position: absolute;
@@ -19,8 +17,7 @@ body
     z-index: 1;
     width: 100%;
 }
-.logo
-{
+.logo{
     max-width: 100%;
     height: auto;
     vertical-align: top;
@@ -34,13 +31,11 @@ body
    text-decoration: none;
    list-style-type: none;
 }
-.navigation li
-{
+.navigation li{
     
     margin-right: 59px;
 }
-.navigation li a
-{
+.navigation li a{
     text-decoration: none;
     font-size: 14px;
     line-height: 16px;
@@ -58,9 +53,8 @@ body
 .navigation li:last-child{
     margin-right: 0;
 }
-.navigation li div a
-{
-    color: yellow;
+.navigation li div a{
+    color: #FFCA00;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -99,8 +93,7 @@ body
     background-color: white;
     margin: 10px 25px;
 }
-.heading
-{
+.heading{
 background:url(../img/background.png);
 background-size: cover;
 background-position: center center;
@@ -112,7 +105,7 @@ align-items: center;
 position: relative;
 margin-bottom: 41px;
 }
-.heading__inner {
+.heading__inner{
     max-width: 960px;
     width: 100%;
     height: 565px;
@@ -123,8 +116,7 @@ margin-bottom: 41px;
     justify-content: space-between;
 
 }
-.heading__icon
-{
+.heading__icon{
 font-family: sans-serif;
 font-style: normal;
 font-weight: 300;
@@ -132,8 +124,7 @@ font-size: 18px;
 line-height: 21px;
 color: #fff;
 }
-.arrow
-{
+.arrow{
     font-size: 14px;
     line-height: 20px;
     color: grey;
@@ -144,13 +135,11 @@ color: #fff;
     left: 68px;
     transform: rotate(-90deg);
 }
-.arrow svg
-{
+.arrow svg{
     transform: rotate(90deg);
     margin-right: 40px;
 }
-.chat
-{
+.chat{
     width: 76px;
     height: 76px;
     border-radius: 50%;
@@ -162,19 +151,12 @@ color: #fff;
     right: 93px;
     bottom: 44px;
     transition: box-shadow 1s cubic-bezier(.34,.47,.76,.71);
-    animation-name: button;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
 }
-.chat:hover
-{
+.chat:hover{
     background-color:  #FFCA00;
     box-shadow: 0 0 0 24px rgba(255, 204, 0, 0.404);
 }
-.heading__title 
-{
+.heading__title {
     max-width: 960px;
     width: 100%;
     height: 100px;
@@ -194,7 +176,7 @@ color: #fff;
     outline: none;
     width: 240px;
     height: 68px;
-    background-color: yellow;
+    background-color: #FFCA00;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -206,31 +188,16 @@ color: #fff;
     height: 8px;
     background: #202020;
     border-radius: 50%;
+    transition: all 1s ease-out;
 }
 .heading__button:hover .headin__button__text
 {
-    color: white;
+    color:  #FFCA00;
     z-index: 1;
 }
 .heading__button:hover .oval
 {
-   
-    animation-name: button2;
-    animation-duration: 5s;
-    animation-direction: alternate;
-    transition: box-shadow 1s cubic-bezier(.34,.47,.76,.71);
-}
-
-@keyframes button2
-{
-    0%
-    {
-        box-shadow: 0 0 0 24px #202020;
-    }
-    50%
-    {
-        box-shadow: 0 0 0 400px #202020;
-    }
+    transform: scale(60);
 }
 .page
 {
@@ -300,10 +267,38 @@ color: #fff;
     line-height: 16px;
     color: #202020;
     margin-bottom: 28px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #F0F0F0;
+    position: relative;
+}
+.service__item__footer__text{
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #202020;
+    display: none;
 }
 .service__item__footer svg
 {
     margin-left: 22px;
+}
+.service__item__footer:hover::after
+{
+    width: 70%;
+}
+.service__item__footer:hover .service__item__footer__text{
+    display: block;
+}
+.service__item__footer::after{
+    content: '';
+    width: 0;
+    border: 1px solid  #FFCA00;
+    left: 0px;
+    bottom: -1px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
 }
 .service__list{
     display: flex;
@@ -487,10 +482,16 @@ color: #fff;
     line-height: 20px;
     color: #7E7E7E;
 }
+.button__container{
+    width: 100%;
+    max-width: 960px;
+    padding: 0 15px;
+    margin-bottom: 126px;
+}
 .button__allproject{
     list-style-type: none;
     text-decoration: none;
-    width: 50%;
+    width: 100%;
     height: 68px;
     border: 2px solid #FFCA00;
     background-color: #FFFFFF;
@@ -504,6 +505,7 @@ color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    
     
 }
 .achivments{
@@ -640,14 +642,18 @@ color: #fff;
 .footer{
     background-color: black;
     background-size: cover;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    left: 0;
-    top: 0;
-    height: 110px;
+    margin: 0;
     width: 100%;
     border-top: 2px solid  #FFCA00;
+    padding: 35px 0;
+}
+.footer__container{
+    display: flex;
+    max-width: 960px;
+    padding: 0 15px;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
 }
 .footer__reserved{
     max-width: 264px;
@@ -657,6 +663,7 @@ color: #fff;
     font-size: 12px;
     line-height: 14px;
     color: #7E7E7E;
+    text-align: center;
 
 }
 .footer__email{
@@ -710,15 +717,13 @@ color: #fff;
         justify-content: center;
         height: 100%;
     }
-    .Portfolio__item1
-    {
+    .Portfolio__item1{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         width: 390px;
     }
-    .Portfolio__item
-    {
+    .Portfolio__item{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -773,8 +778,11 @@ color: #fff;
         justify-content: center;
         align-items: center;
     }
-    .footer{
+    .footer__container{
         flex-direction: column;
+    }
+    .footer__logo{
+        margin-bottom: 20px;
     }
     .footer__icon{
         display: none;
