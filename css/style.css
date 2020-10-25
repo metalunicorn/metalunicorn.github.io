@@ -405,10 +405,12 @@ color: #fff;
     height: 100%;
 }
 .Portfolio__item1{
-    height: 510px;
+    position: relative;
     display: flex;
     width: 33%;
     flex-wrap: wrap;
+    height: 484px;
+    margin-bottom: 40px;
 }
 .Portfolio__item{
     position: relative;
@@ -417,7 +419,6 @@ color: #fff;
     overflow: hidden;
 }
 .Portfolio__item img{
-    display: block;
     transition: all .3s ease-in-out;
     position: relative;
     z-index: 1;
@@ -436,12 +437,14 @@ color: #fff;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 .Portfolio__item__text{
-    z-index: 3;
+    z-index: 2;
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 310px;
-    top: 308px;
+    width: 100%;
+    transition: all 0.4s ease-in-out 0s;
+    bottom: 0px;
+    transform: translateY(95px);
 }
 .Portfolio__item-title{
     font-family: sans-serif;
@@ -471,9 +474,7 @@ color: #fff;
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
-    padding: 0 30px;
-    padding-top: 20px;
-    padding-bottom: 28px;
+    padding: 30px 30px 75px;
     background: #F5F7F7;
     font-family: sans-serif;
     font-style: normal;
@@ -481,12 +482,23 @@ color: #fff;
     font-size: 14px;
     line-height: 20px;
     color: #7E7E7E;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+.Portfolio__item__footer svg{
+    margin-top: 31px;
+    margin-left: 0;
+}
+.Portfolio__item__footer:hover
+{
+    padding-bottom: 130px;
 }
 .button__container{
     width: 100%;
     max-width: 960px;
     padding: 0 15px;
-    margin-bottom: 126px;
+    margin-bottom: 150px;
+    position: relative;
 }
 .button__allproject{
     list-style-type: none;
